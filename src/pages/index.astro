@@ -127,6 +127,7 @@ const lastUpdate = new Date().toLocaleDateString("en-US", {
   .theme-toggle:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px var(--card-shadow-hover);
+    z-index: 10;
   }
 
   .profile {
@@ -357,6 +358,64 @@ const lastUpdate = new Date().toLocaleDateString("en-US", {
 
     .link-card {
       padding: 0.8rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .theme-toggle {
+      top: 0.5rem;
+      right: 0.5rem;
+      z-index: 10;
+    }
+  }
+
+  @media (max-width: 400px) {
+    main {
+      padding: 0.5rem;
+    }
+
+    .banner {
+      height: 120px;
+      margin-bottom: 2.5rem;
+    }
+
+    .avatar-container {
+      top: 80px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+    }
+
+    .username {
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      font-size: 1.3rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    .link-card {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+
+    .link-card i {
+      font-size: 1.2rem;
+      width: 24px;
+    }
+
+    .theme-toggle {
+      top: 0.5rem;
+      right: 0.5rem;
+      width: 35px;
+      height: 35px;
+      z-index: 10;
     }
   }
 </style>
