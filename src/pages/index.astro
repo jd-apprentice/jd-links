@@ -29,7 +29,7 @@ const lastUpdate = new Date().toLocaleDateString("en-US", {
       <div class="avatar-container">
         <img src="/avatar.jpg" alt="Profile" class="avatar" />
       </div>
-      <h1>@{user.username}</h1>
+      <h1 class="username">@{user.username}</h1>
       <p>{user.bio}</p>
     </div>
 
@@ -175,6 +175,13 @@ const lastUpdate = new Date().toLocaleDateString("en-US", {
     height: 120px;
     border-radius: 50%;
     border: 4px solid var(--bg-color);
+  }
+
+  .username {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
   }
 
   .social-share {
@@ -338,6 +345,10 @@ const lastUpdate = new Date().toLocaleDateString("en-US", {
     .avatar {
       width: 100px;
       height: 100px;
+    }
+
+    .username {
+      padding-top: 5%;
     }
 
     h1 {
