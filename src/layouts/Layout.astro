@@ -1,0 +1,84 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <script>
+      // Check for saved theme preference, otherwise use system preference
+      const theme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --text-color-secondary: #4a4a4a;
+    --card-bg: #f8f9fa;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: rgba(0, 0, 0, 0.15);
+    --card-border: #e9ecef;
+  }
+
+  :root[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --text-color-secondary: #a0a0a0;
+    --card-bg: #1e1e1e;
+    --card-shadow: rgba(0, 0, 0, 0.5);
+    --card-shadow-hover: rgba(0, 0, 0, 0.7);
+    --card-border: #2d2d2d;
+  }
+
+  * {
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+    background: var(--bg-color);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: var(--text-color);
+  }
+
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+</style>
