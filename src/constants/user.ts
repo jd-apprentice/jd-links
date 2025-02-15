@@ -1,4 +1,4 @@
 export default {
-    username: "jd-apprentice",
-    bio: "Homelab Enjoyer",
-}
+  username: "jd-apprentice",
+  bio: "Homelab Enjoyer",
+};
