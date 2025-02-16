@@ -20,6 +20,7 @@ export default defineConfig({
     release: process.env.npm_package_version,
     sourceMapsUploadOptions: {
       project: "jd-links",
+      telemetry: false,
       authToken: process.env.SENTRY_AUTH_TOKEN,
     }
   })],

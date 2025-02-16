@@ -77,7 +77,10 @@ const lastUpdate = new Date().toLocaleDateString("en-US", {
     function updateThemeIcon(theme: string) {
       if (themeIcon) {
         themeIcon.className = theme === "dark" ? "fas fa-sun" : "fas fa-moon";
+        return;
       }
+
+      throw new Error("Theme icon not found");
     }
 
     const currentTheme =

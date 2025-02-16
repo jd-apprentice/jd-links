@@ -15,12 +15,22 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
+      - name: Create .env file
+        run: |
+          touch .env
+          echo "SENTRY_AUTH_TOKEN=${{ env.SENTRY_AUTH_TOKEN }}" >> .env
+
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+        
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         # with:
