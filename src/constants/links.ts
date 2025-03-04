@@ -1,5 +1,15 @@
 export default [
   {
+    group: "📦 Work",
+    items: [
+      {
+        title: "Services",
+        url: "https://www.notion.so/dyallab/Services-1a94eadd8ff2808082bec231c544fedd",
+        icon: "fas fa-money-bill",
+      },
+    ],
+  },
+  {
     group: "👨‍💻 Socials",
     items: [
       {
