@@ -1,3 +1,5 @@
+// https://playwright.dev/docs/test-retries#reuse-single-page-between-tests
+
 import { test, expect, type Page } from '@playwright/test';
 import { describe } from 'node:test';
 
