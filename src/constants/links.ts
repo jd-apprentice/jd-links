@@ -22,6 +22,11 @@ export default [
         url: "https://www.linkedin.com/in/jgmd/",
         icon: "fab fa-linkedin",
       },
+      {
+        title: "Youtube",
+        url: "https://www.youtube.com/@Piolaso",
+        icon: "fab fa-youtube",
+      },
     ],
   },
   {

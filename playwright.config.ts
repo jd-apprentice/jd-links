@@ -45,10 +45,14 @@ export default defineConfig({
     },
 
     /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Android',
-    //   use: { ...devices['Galaxy S9+'] },
-    // },
+    {
+      name: 'Mobile Android',
+      use: { ...devices['Galaxy S9+'] },
+    },
+    {
+      name: 'Mobile Android',
+      use: { ...devices['iPhone 14 Pro'] },
+    },
 
     /* Test against branded browsers. */
     // {
