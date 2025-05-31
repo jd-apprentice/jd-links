@@ -1,14 +1,4 @@
 export default [
-  // {
-  //   group: "📦 Work",
-  //   items: [
-  //     {
-  //       title: "Services",
-  //       url: "https://www.notion.so/dyallab/Services-1a94eadd8ff2808082bec231c544fedd",
-  //       icon: "fas fa-money-bill",
-  //     },
-  //   ],
-  // },
   {
     group: "👨‍💻 Socials",
     items: [
@@ -43,9 +33,14 @@ export default [
         icon: "fas fa-blog",
       },
       {
-        title: "Pentest",
-        url: "https://pentest.jonathan.com.ar",
+        title: "BugBounty",
+        url: "https://www.openbugbounty.org/researchers/dyallo/",
         icon: "fas fa-shield-alt",
+      },
+      {
+        title: "HackTheBox",
+        url: "https://app.hackthebox.com/profile/834305",
+        icon: "fas fa-terminal",
       },
     ],
   },
