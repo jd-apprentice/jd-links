@@ -1,5 +1,22 @@
+allowBuilds:
+  '@sentry/cli': true
+  esbuild: false
+  sharp: false
 ignoredBuiltDependencies:
   - sharp
+minimumReleaseAgeExclude:
+  - brace-expansion@5.0.5 || 5.0.6 || 5.0.7 || 5.0.8
+  - picomatch@4.0.4
+  - postcss@8.5.10 || 8.5.12 || 8.5.18
+  - astro@6.1.6 || 6.1.10 || 6.3.3 || 6.4.6 || 7.0.4 || 7.0.6 || 7.0.10
+  - devalue@5.8.1
+  - esbuild@0.28.1
+  - vite@7.3.5
+  - '@opentelemetry/core@2.8.0'
+  - js-yaml@4.1.2 || 4.3.0
+  - '@babel/core@7.29.1'
+  - svgo@4.0.2
+  - sharp@0.35.0
 overrides:
   astro@>=2.10.10 <5.18.1: '>=5.18.1'
   brace-expansion@<1.1.13: '>=1.1.13'
